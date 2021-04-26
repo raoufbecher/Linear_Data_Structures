@@ -1,0 +1,22 @@
+ALGORITHM second problem 1
+VAR
+    set1 : ARRAY_OF INTEGER []; 
+    set2 : ARRAY_OF INTEGER []; 
+    sum : INTEGER;
+BEGIN
+    sum:=0 ;
+    write ("give the first set") ;
+    read(set1) ;
+    write("give the second set") ; 
+    read (set2) ; 
+    FOR i FROM 0 TO set1.length-1 DO
+            FOR j FROM 0 TO set2.length-1 DO 
+                IF (set1[i] = set2[j] )) THEN
+                    sum := sum + set1[i] + set2[j] ;
+                END_IF
+            END_FOR
+        END_FOR
+
+    write (sum);
+    
+END

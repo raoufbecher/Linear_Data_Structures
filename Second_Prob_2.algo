@@ -1,0 +1,24 @@
+ALGORITHM second problem 2
+VAR
+    htab : HASH_TABLE <INTEGER,INTEGER>;
+    set1,set2: ARRAY_OF INTEGER [];
+    sum,count : INTEGER;
+    sum:=0 ;
+    count:=1 ;
+BEGIN
+    FOR i FROM 0 TO set1.length-1 DO
+            FOR j FROM 0 TO set2.length-1 DO 
+                IF (set1[i] = set2[j] )) THEN
+                    htab.insert(1,set1[i]) ;
+                    htab.insert(count+1,set2[j]);
+                END_IF
+            END_FOR
+            IF (htab.get(set1[i])= 1) THEN
+                    sum:= sum + set1[i] ;                
+                END_IF
+            count:=1 ; 
+        END_FOR
+    
+
+    Write(sum);
+END

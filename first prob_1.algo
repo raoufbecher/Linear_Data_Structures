@@ -1,0 +1,21 @@
+ALGORITHM first problem 1
+VAR
+    i,j : INTEGER
+    sum_Cummon,sum_distinct:INTEGER:=0
+    set1,set2,set : ARRAY_OF INTEGER[];
+    found:BOOLEAN
+BEGIN
+    set:=concat(set1,set2)
+    FOR i FROM 0 TO set.length-1 DO
+        found:=false
+       FOR j FROM 0 TO set.length-1  DO
+           IF (set[i]=set[j] AND i<>j) THEN
+               sum_Cummon:=sum_Cummon+set[i]
+               found:=true
+           END_IF
+       END_FOR
+           IF (found=false) THEN
+               sum_distinct=sum_distinct+set[i]
+           END_IF
+    END_FOR
+END
